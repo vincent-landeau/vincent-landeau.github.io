@@ -28,7 +28,6 @@ export default {
       const workItemImage = event.target.querySelector("#workItemImage")
       const offsetImage = workItemImage.getBoundingClientRect()
       const offsetBody = document.body.getBoundingClientRect()
-      console.log(parseInt(event.target.top))
       const top = Math.ceil(offsetImage.top - parseInt(workItemImage.style.top))
       const right = Math.ceil(offsetImage.right - offsetBody.right)
 
@@ -38,7 +37,7 @@ export default {
       content.style.aspectRatio = "auto"
       content.style.height = "100%"
       content.classList.add('active')
-      workItemImage.style.zIndex = "9"
+      workItemImage.style.zIndex = "999"
       gsap.to(workItemImage, {
         top: -top,
         duration: .6,
@@ -103,6 +102,16 @@ export default {
 
 .content.active:after {
   background: linear-gradient(0deg, rgba(30, 30, 30, 0.3), rgba(30, 30, 30, 0.3)), linear-gradient(0deg, rgba(150, 120, 182, 0.3), rgba(150, 120, 182, 0.3));
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 8vw;
+    line-height: 8vw;
+  }
+  .text-stroke {
+    margin-left: 8vw!important;
+  }
 }
 
 </style>

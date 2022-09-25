@@ -32,4 +32,12 @@ export default {
 .cta a .highlighted{
   margin-left: 40%;
 }
+
+@media (max-width: 576px) {
+  .cta a {
+    font-size: 10vw;
+    line-height: 10vw;
+  }
+
+}
 </style>

@@ -45,14 +45,6 @@ h4 {
 
 .text-stroke {
   font-style: italic;
-  color: transparent;
-  -webkit-text-stroke-width: .03vw;
-  -webkit-text-stroke-color: #d9d9d9;
-  transition: color .4s;
-}
-.text-stroke:hover,
-a:hover .text-stroke {
-  color: #d9d9d9;
 }
 
 .highlighted {
@@ -71,21 +63,19 @@ a:hover .text-stroke {
   background-color: #9678B6;
   transition: width .4s;
 }
-.highlighted:hover:after,
-a:hover .highlighted:after {
-  width: 0%;
-}
 
 body {
-  overflow-x: hidden;
   font-family: 'Nunito', sans-serif;
   font-size: 14px;
   color: #d9d9d9;
   line-height: 19px;
 }
 
+#app {
+  overflow-x: hidden;
+}
 section {
-  margin: 0 auto 200px auto;
+  margin: 0 auto 30vh auto;
 }
 
 
@@ -95,13 +85,15 @@ section.container {
 }
 
 section.container .title {
-  max-width: 700px;
-  width: 38vw;
   margin: 0 auto;
+  text-align: center;
 }
 
-section.container h2.text-stroke {
-  text-align: right;
+section.container > .title > :not(.text-stroke) {
+  margin-left: -20%;
+}
+section.container > .title > .text-stroke {
+  margin-right: -20%;
 }
 
 a {
@@ -114,4 +106,40 @@ a {
   color: #9678B6;
   text-decoration: none;
   transition: 0.4s;
+}
+
+@media (hover) {
+  .highlighted:after {
+    transition: width .4s;
+  }
+  .highlighted:hover:after,
+  a:hover .highlighted:after {
+    width: 0%;
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 10vw;
+    line-height: 10vw;
+  }
+
+  section.container > .title > :not(.text-stroke) {
+    margin-left: -35%;
+  }
+  section.container > .title > .text-stroke {
+    margin-right: -35%;
+  }
+}
+@media (min-width: 576px) {
+  .text-stroke {
+    color: transparent;
+    -webkit-text-stroke-width: .03vw;
+    -webkit-text-stroke-color: #d9d9d9;
+    transition: color .4s;
+  }
+  .text-stroke:hover,
+  a:hover .text-stroke {
+    color: #d9d9d9;
+  }
 }

@@ -1,11 +1,19 @@
 <template>
   <div class="greetings">
-    <h1 class="purple">Site en cours de développement</h1>
-    <h3>
-      C'est bientôt prêt !
-    </h3>
+    <h1 class="purple">{{ $t('not-found.title') }}</h1>
+    <h3><a v-on:click="routerPush('home', 'intro')">{{ $t('not-found.go-back') }}</a></h3>
   </div>
 </template>
+
+<script>
+import {routerPush} from "@/router";
+
+export default {
+  setup(){
+    return { routerPush }
+  },
+}
+</script>
 
 <style scoped>
 h1 {

@@ -1,8 +1,8 @@
 <template>
   <section id="section-works" class="container">
     <div class="title">
-      <h2 id="worksTitle">Mes</h2>
-      <h2 id="worksTitleStroke" class="text-stroke">Réalisations</h2>
+      <h2 id="worksTitle">{{ $t('home.works.title') }}</h2>
+      <h2 id="worksTitleStroke" class="text-stroke">{{ $t('home.works.subtitle') }}</h2>
     </div>
     <div id="workItems" class="content">
       <WorkItem v-for="(work,slug) in works"
@@ -81,8 +81,18 @@ export default {
   grid-gap: 60px;
   padding-bottom: 150px;
 }
-.work-item:nth-of-type(even) {
-  position: relative;
-  top: 150px;
+
+@media (min-width: 768px) {
+  .work-item:nth-of-type(even) {
+    position: relative;
+    top: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    padding-top: 50px;
+  }
 }
 </style>

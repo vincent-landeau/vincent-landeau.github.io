@@ -10,29 +10,30 @@
     </div>
     <div class="presentation">
       <div class="info">
-        <p>
-          <span class="info-title">Réalisé en</span>
-          {{ work.date }}
-          <br>
-          <span class="info-title">Rôle</span>
+        <div class="year">
+          <p class="info-title">{{ $t(`work-item.year`) }}</p>
+          <p>{{ work.date }}</p>
+        </div>
+        <div class="roles">
+          <p class="info-title">{{ $tc(`work-item.roles`, rolesLength) }}</p>
           <div v-for="role in work.roles">{{ role }}</div>
-        </p>
+        </div>
       </div>
-      <div class="description">{{ work.description }}</div>
+      <div class="description">{{ $t(`work-item.${$route.params.slug}.description`) }}</div>
       <div class="problemes">
-        <h4>Problèmes</h4>
-        <p>{{ work.problems }}</p>
+        <h4>{{ $t(`work-item.problems`) }}</h4>
+        <p>{{ $t(`work-item.${$route.params.slug}.problems`) }}</p>
       </div>
       <div class="solutions">
-        <h4>Solutions</h4>
-        <p>{{ work.solutions }}</p>
+        <h4>{{ $t(`work-item.solutions`) }}</h4>
+        <p>{{ $t(`work-item.${$route.params.slug}.solutions`) }}</p>
       </div>
-      <Cta :href=work.url textstroke="Visiter" highlighted="le Site"></Cta>
+      <Cta :href=work.url :textstroke="$t(`work-item.visit-website-stroke`)" :highlighted="$t(`work-item.visit-website-highlighted`)"></Cta>
     </div>
     <div v-for="(item, index) in work.content" class="content">
-      <div v-if="item.title || item.text">
-        <h4>{{ item.title }}</h4>
-        <p>{{ item.text }}</p>
+      <div v-if="item.text">
+        <h4>{{ $t(`work-item.${$route.params.slug}.content.${index}.title`) }}</h4>
+        <p>{{ $t(`work-item.${$route.params.slug}.content.${index}.text`) }}</p>
       </div>
       <img v-if="item.type == 'image'" :src=item.src alt="">
       <video v-else-if="item.type == 'local-video'" :src=item.src alt=""></video>
@@ -42,7 +43,8 @@
   <OtherWorks :key="componentKey" :slug=$route.params.slug></OtherWorks>
 </template>
 <script setup>
-import { ref } from 'vue';
+import {ref} from 'vue';
+
 const componentKey = ref(0);
 
 const forceRerender = () => {
@@ -53,14 +55,15 @@ const forceRerender = () => {
 import Cta from '../components/Cta.vue'
 import OtherWorks from '../components/OtherWorks.vue'
 import {gsap} from "gsap";
-import { useRoute } from 'vue-router'
+import {useRoute} from 'vue-router'
 import {works} from "@/assets/data";
 
 export default {
   components: {Cta, OtherWorks},
   data() {
     return {
-      work: []
+      work: [],
+      rolesLength: null
     }
   },
   mounted() {
@@ -76,10 +79,11 @@ export default {
     this.prepare()
     this.forceRerender()
   },
-  methods :{
+  methods: {
     prepare() {
       const route = useRoute()
       this.work = works[route.params.slug]
+      this.rolesLength = this.work.roles.length
     }
   }
 }
@@ -126,25 +130,30 @@ export default {
 }
 
 .title {
-  margin: 0 3vw 0 auto !important;
+  position: relative;
 }
 
 h1 {
+  text-align: left;
   font-size: 7vw;
   line-height: 7vw;
 }
 
+h1:not(.text-stroke) {
+  margin-left: 30% !important;
+}
+
 h1.text-stroke {
-  margin-left: 15vw;
+  margin-left: 50%;
 }
 
 h1.text-stroke:after {
   content: "";
   position: absolute;
   top: 50%;
-  transform: translate(25%, -50%);
-  left: -15vw;
-  width: 10vw;
+  transform: translateX(-50%);
+  left: -16%;
+  width: 18%;
   height: 1px;
   background-color: #d9d9d9;
 }
@@ -156,24 +165,36 @@ h1.text-stroke:after {
   grid-template-rows: auto auto auto;
   gap: 50px 0px;
   grid-template-areas:
-    "info . . description description description"
+    "info info . description description description"
     ". problemes problemes . solutions solutions"
-    ". cta cta . . .";
+    ". cta cta cta cta cta";
 }
 
 .info {
   grid-area: info;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: start;
+}
+
+.roles,
+.year {
+  margin-top: 18px;
+  width: 100%;
 }
 
 .info-title {
-  display: block;
-  margin-top: 18px;
   font-weight: bold;
   font-size: 18px;
 }
 
 .description {
+  text-align: justify;
+}
+
+.description {
   grid-area: description;
+  text-align: justify;
 }
 
 .problemes {
@@ -220,5 +241,73 @@ h1.text-stroke:after {
   margin: 100px 0 100px 0;
 }
 
+@media (max-width : 992px) {
+  .container {
+    margin-top: -4vw;
+  }
+  h1 {
+    font-size: 10vw;
+    line-height: 10vw;
+  }
+  .presentation {
+    grid-template-areas:
+    "info info description description description description"
+    ". problemes problemes . solutions solutions"
+    ". cta cta cta cta cta";
+  }
+}
+@media (max-width : 768px) {
+  .container {
+    margin-top: -4vw;
+  }
+  h1 {
+    font-size: 12vw;
+    line-height: 12vw;
+  }
+
+  h1:not(.text-stroke) {
+    margin-left: 0 !important;
+  }
+
+  h1.text-stroke {
+    margin-left: 30%;
+  }
+
+  .presentation {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+    "info . ."
+    "info description description"
+    "problemes problemes ."
+    "solutions solutions ."
+    ". cta cta";
+  }
+}
+
+@media (max-width: 576px) {
+  .presentation {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+    "info info info"
+    "description description description"
+    "problemes problemes ."
+    ". solutions solutions"
+    "cta cta cta";
+  }
+
+  .info {
+    flex-direction: row-reverse;
+  }
+  .year {
+    text-align: right;
+  }
+  .roles,
+  .year {
+    margin-top: 0;
+    width: 50%;
+  }
+}
 
 </style>

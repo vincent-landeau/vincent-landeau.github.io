@@ -1,5 +1,6 @@
 export const works = {
     "rock-en-delire": {
+        "nav-label": "Rock en délire",
         "title": "Rock en",
         "subtitle": "délire",
         "image": {
@@ -8,30 +9,22 @@ export const works = {
         },
         "date": "2021",
         "roles": ["Graphiste", "Concepteur UX / UI", "Developpeur React"],
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in " +
-            "urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, " +
-            "sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur. " +
-            "Nulla viverra dolor a diam posuere, at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus " +
-            "nisi. Aenean dictum dui condimentum tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus, " +
-            "id lacinia ipsum lacinia. ",
-        "problems": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in " +
-            "urna at, molestie porttitor mi.",
-        "solutions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in " +
-            "urna at, molestie porttitor mi.",
         "url": "https://rockendelire.webflow.io",
         "content": [
             {
+                text: false,
                 type: 'image',
                 src: '/rockendelire-site.png',
             },
             {
-                title: 'Le logo',
-                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi. ' + 'Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna nec nibh. Proin accumsan ' + 'augue eu massa luctus, sed varius orci consectetur.',
+                text: true,
                 type: 'image',
                 src: '/logo-rockendelire-blanc.png',
             },
         ]
-    }, "la-bonne-moustache": {
+    },
+    "la-bonne-moustache": {
+        "nav-label": "La bonne Moustache",
         "title": "La bonne",
         "subtitle": "Moustache",
         "image": {
@@ -40,20 +33,11 @@ export const works = {
         },
         "date": "2020",
         "roles": ["Intégrateur Bootstrap"],
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in " +
-            "urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, " +
-            "sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur. " +
-            "Nulla viverra dolor a diam posuere, at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus " +
-            "nisi. Aenean dictum dui condimentum tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus, " +
-            "id lacinia ipsum lacinia. ",
-        "problems": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in " +
-            "urna at, molestie porttitor mi.",
-        "solutions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in " +
-            "urna at, molestie porttitor mi.",
         "url": "https://webiut.mickael.in/~usquikz/labonnemoustache/",
         "content": []
     },
     "stanislac": {
+        "nav-label": "Stanislac",
         "title": "Stanislac",
         "subtitle": "Dataviz",
         "image": {
@@ -62,20 +46,11 @@ export const works = {
         },
         "date": "2021",
         "roles": ["Développeur"],
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in " +
-            "urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, " +
-            "sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur. " +
-            "Nulla viverra dolor a diam posuere, at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus " +
-            "nisi. Aenean dictum dui condimentum tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus, " +
-            "id lacinia ipsum lacinia. ",
-        "problems": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in " +
-            "urna at, molestie porttitor mi.",
-        "solutions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in " +
-            "urna at, molestie porttitor mi.",
         "url": "",
         "content": []
     },
     "le-france": {
+        "nav-label": "Le France",
         "title": "Le France",
         "subtitle": "Experience RA",
         "image": {
@@ -84,16 +59,6 @@ export const works = {
         },
         "date": "2022",
         "roles": ["Développeur"],
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in " +
-            "urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, " +
-            "sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur. " +
-            "Nulla viverra dolor a diam posuere, at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus " +
-            "nisi. Aenean dictum dui condimentum tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus, " +
-            "id lacinia ipsum lacinia. ",
-        "problems": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in " +
-            "urna at, molestie porttitor mi.",
-        "solutions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in " +
-            "urna at, molestie porttitor mi.",
         "url": "",
         "content": []
     },

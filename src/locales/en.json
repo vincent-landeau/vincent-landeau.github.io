@@ -1,0 +1,59 @@
+{
+  "home": {
+    "intro": {
+      "nav-label": "Intro",
+      "subtitle": "Full-stack developper"
+    },
+    "about": {
+      "nav-label": "About",
+      "title": "About",
+      "subtitle": "me",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie\n        porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna\n        nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur. Nulla viverra dolor a diam posuere,\n        at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus nisi. Aenean dictum dui condimentum\n        tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus, id lacinia ipsum lacinia.<br>\n        <br>\n        Vestibulum ac eros interdum, laoreet urna ultrices, tristique nibh. Nam ut risus sit amet tortor fringilla\n        eleifend at nec ipsum. Sed fringilla ante at ante venenatis malesuada. Sed facilisis magna ante, sit amet\n        molestie orci eleifend eget. Cras non convallis ex. Aenean augue mauris, malesuada vel condimentum non, dapibus\n        non urna. Fusce euismod gravida tristique. Sed sed dolor vitae lacus aliquet ullamcorper et quis lectus.",
+      "text-stroke-cta": "Download",
+      "text-highlighted-cta": "my CV"
+    },
+    "works": {
+      "nav-label": "Works",
+      "title": "My",
+      "subtitle": "Work"
+    }
+  },
+  "work-item": {
+    "year": "Year",
+    "roles": "Role | Roles",
+    "problems": "Problems",
+    "solutions": "Solutions",
+    "visit-website-stroke": "Visit",
+    "visit-website-highlighted": "Website",
+    "rock-en-delire": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur Nulla viverra dolor a diam posuere, at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus nisi. Aenean dictum dui condimentum tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus",
+      "problems": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignim in urna at, molestie porttitor mi.",
+      "solutions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi.",
+      "content": {
+        "1": {
+          "title": "The logo",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur."
+        }
+      }
+    },
+    "la-bonne-moustache": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur Nulla viverra dolor a diam posuere, at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus nisi. Aenean dictum dui condimentum tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus",
+      "problems": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignim in urna at, molestie porttitor mi.",
+      "solutions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi."
+    },
+    "stanislac": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur Nulla viverra dolor a diam posuere, at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus nisi. Aenean dictum dui condimentum tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus",
+      "problems": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignim in urna at, molestie porttitor mi.",
+      "solutions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi."
+    },
+    "le-france": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur Nulla viverra dolor a diam posuere, at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus nisi. Aenean dictum dui condimentum tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus",
+      "problems": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignim in urna at, molestie porttitor mi.",
+      "solutions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi."
+    }
+  },
+  "not-found": {
+    "title": "Oups! You're at the wrong place",
+    "go-back": "Go back to the good place"
+  }
+}

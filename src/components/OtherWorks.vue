@@ -43,6 +43,8 @@ export default {
       }
     })
   },
+  updated() {
+  },
   methods: {
     forceRerender() {
       this.componentKey += 1;
@@ -63,10 +65,12 @@ section {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
 }
-
-.other-work:hover {
-  width: 150%;
+@media (hover) {
+  .other-work:hover {
+    width: 150%;
+  }
 }
 
  .text-stroke {
@@ -94,5 +98,35 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media (max-width : 992px) {
+  section {
+    aspect-ratio: 3/1;
+  }
+  h3.text-stroke {
+    color: #d9d9d9;
+  }
+}
+
+@media (max-width : 768px) {
+  section {
+    aspect-ratio: 2/1;
+  }
+  h3 {
+    font-size: 5.2vw;
+    line-height: 5.2vw;
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    aspect-ratio: 3/2;
+    flex-direction: column;
+  }
+
+  h3 {
+    font-size: 10vw;
+    line-height: 10vw;
+  }
 }
 </style>

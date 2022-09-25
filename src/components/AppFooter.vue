@@ -28,7 +28,12 @@ footer {
 .mail{
   width: 371px;
   display: flex;
+  justify-content: center;
   place-items: center;
+}
+
+footer span {
+  padding: 10px 0;
 }
 
 .mail:after,
@@ -38,9 +43,33 @@ footer {
   height: 1px;
   width: 100%;
   background-color: #d9d9d9;
+  transition: width .4s ease-out;
+}
+
+@media only screen {
+  .mail:hover:after,
+  .mail:hover:before {
+    width: 0%;
+  }
 }
 
 .mail span {
   margin: 0 20px;
+}
+@media (max-width : 992px) {
+  footer {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width : 576px) {
+  footer {
+    margin: 30px;
+  }
+  .mail{
+    width: 100%;
+  }
+  footer span {
+    text-align: center;
+  }
 }
 </style>

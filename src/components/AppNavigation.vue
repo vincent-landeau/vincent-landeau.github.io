@@ -24,28 +24,25 @@
       </svg>
     </a>
     <div class="menu">
-<!--      <a v-on:click="changeLanguage()" class="lang-selector active">FR</a>&nbsp;<a v-on:click="changeLanguage()" class="lang-selector">EN</a>-->
-      <a v-on:click="showDropdown = !showDropdown" class="menu-burger" :class="{'active': showDropdown}">
+      <a v-for="lang in listLang" v-on:click="changeLang(lang); prepareAnimationNavigation()" class="lang-selector" :class="{ 'active': $i18n.locale === lang, 'show': showDropdown }">{{ lang }}</a>
+      <a v-on:click="this.showDropdown = !this.showDropdown" class="menu-burger" :class="{'active': showDropdown}">
         <div class="hamburger hamburger-one"></div>
       </a>
     </div>
     <div class="navigation" v-on:mouseenter="toggleMenuText()" v-on:mouseleave="toggleMenuText()" :style="{ display: ($route.name === 'home') ? 'block' : 'none'}">
       <div v-for="navItem in navItems" class="nav-item">
         <a
-          v-on:click="routerPush('home', navItem.slug);"
-          v-on:mouseenter="bulletPointOver = navItem.slug" v-on:mouseleave="bulletPointOver = null">
+          v-on:click.stop.prevent="routerPush('home', navItem);">
         <div class="bullet-point"
-             :class="{'active': bulletPointActive === navItem.slug, 'over': bulletPointOver === navItem.slug}"></div>
-        <span :id=navItem.slug></span></a></div>
+             :class="{'active': bulletPointActive === navItem}"></div>
+        <span :id=navItem></span></a></div>
     </div>
     <div class="dropdown" :class="{'active': showDropdown}">
       <nav>
         <ul>
-          <li class="text-stroke" v-on:click="routerPush('home', 'intro'); showDropdown = !showDropdown">Introduction</li>
-          <li class="text-stroke" v-on:click="routerPush('home', 'about'); showDropdown = !showDropdown">À propos</li>
-          <li class="text-stroke" v-on:click="routerPush('home', 'works'); showDropdown = !showDropdown">Réalisation</li>
+          <li v-for="navItem in navItems" class="text-stroke" v-on:click="routerPush('home', navItem); showDropdown = !showDropdown">{{ $t(`home.${navItem}.nav-label`) }}</li>
           <ul>
-            <li v-for="(work, key) in works" class="text-stroke" v-on:click="routerPush( 'work-item', undefined, { slug: key }); showDropdown = !showDropdown">{{ work.title }} {{ work.subtitle }}</li>
+            <li v-for="(work, key) in works" class="text-stroke" v-on:click="routerPush( 'work-item', undefined, { slug: key }); showDropdown = !showDropdown">{{ work['nav-label'] }}</li>
           </ul>
         </ul>
 
@@ -60,20 +57,18 @@ import {TextPlugin} from "gsap/TextPlugin";
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
 import {routerPush} from "@/router";
 import {works} from "@/assets/data";
+import {languagesAvailable, loadLanguageAsync} from "@/i18n";
 
 
 export default {
   data() {
     return {
+      currentLang: null,
+      listLang: languagesAvailable,
       showDropdown: false,
       navTl: [],
       bulletPointActive: 'intro',
-      bulletPointOver: null,
-      navItems: [
-        {name: 'Intro', slug: 'intro'},
-        {name: 'À propos', slug: 'about'},
-        {name: 'Réalisations', slug: 'works'},
-      ]
+      navItems: ['intro', 'about', 'works']
     }
   },
   setup(){
@@ -81,11 +76,6 @@ export default {
   },
   mounted() {
     gsap.registerPlugin(ScrollToPlugin, TextPlugin);
-    this.navItems.forEach((value, index) => {
-      this.navTl[index] = gsap
-          .to(".nav-item #" + value.slug, {duration: .4, text: value.name})
-          .reversed(true)
-    })
     document.addEventListener("scroll", () => {
       if (document.querySelector(".navigation").style.display !== "none") {
         const offsetScrollY = scrollY + screen.height / 5
@@ -104,8 +94,23 @@ export default {
         tl.reversed(!tl.reversed())
       })
     },
-    changeLanguage() {
-      console.log('oui')
+    changeLang(lang) {
+      loadLanguageAsync(lang)
+      this.showDropdown = false
+    },
+    prepareAnimationNavigation() {
+      this.navTl = []
+      this.navItems.forEach((slug, index) => {
+        this.navTl[index] = gsap
+            .to(".nav-item #" + slug, {duration: .4, text: this.$t(`home.${slug}.nav-label`)})
+            .reversed(true)
+      })
+    },
+  },
+  updated() {
+    if (this.currentLang !== this.$i18n.locale) {
+      this.prepareAnimationNavigation()
+      this.currentLang = this.$i18n.locale
     }
   }
 }
@@ -129,8 +134,14 @@ export default {
   right: 50px;
 }
 
-.lang-selector {
-  font-size: 18px;
+.lang-selector,
+.lang-selector.show {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 5px;
+  transform: translateX(0px);
+  opacity: 1;
+  transition: opacity .4s, transform .4s;
 }
 
 .lang-selector.active {
@@ -212,10 +223,12 @@ export default {
   padding: 10px;
   height: 39px;
 }
-
+.nav-item:not(:last-child) {
+  margin-bottom: 100px;
+}
 .nav-item:not(:last-child):after {
   content: "";
-  position: relative;
+  position: absolute;
   display: block;
   margin-left: 10px;
   width: 1px;
@@ -224,8 +237,8 @@ export default {
 }
 
 .bullet-point {
-  width: 4px;
-  height: 4px;
+  width: 4px ;
+  height: 4px ;
   margin-left: -2px;
   margin-right: 13px;
   border-radius: 50%;
@@ -233,7 +246,7 @@ export default {
   transition: all .2s ease-in-out;
 }
 
-.bullet-point.over,
+.nav-item:hover > a > .bullet-point,
 .bullet-point.active {
   width: 10px;
   height: 10px;
@@ -288,5 +301,55 @@ export default {
   margin-left: 5vw;
   font-size: 7vw;
   line-height: 10vw;
+}
+
+@media (max-width: 992px) {
+  .navigation {
+    display: none!important;
+  }
+}
+@media (max-width: 768px) {
+  .logo {
+    top: 20px;
+    left: 20px;
+  }
+  .menu {
+    top: 20px;
+    right: 20px;
+  }
+  .dropdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dropdown nav {
+    padding-top: 0;
+  }
+  .dropdown nav li{
+    padding: 1.5vh 0;
+  }
+}
+@media (max-width: 576px) {
+  .logo svg {
+    height: 32px;
+    width: auto;
+  }
+
+  .menu-burger {
+    width: 24px;
+    height: 24px;
+    margin: 4px 13px 4px 30px;
+  }
+  .hamburger:before {
+    top: -10px;
+  }
+  .hamburger:after {
+    top: 10px;
+  }
+
+  .lang-selector {
+    transform: translateX(50px);
+    opacity: 0;
+  }
 }
 </style>
