@@ -67,9 +67,18 @@ section {
   width: 100%;
   height: 100%;
 }
-@media (hover) {
+@media (hover) and (min-width: 576px){
   .other-work:hover {
     width: 150%;
+  }
+}
+@media (hover) and (max-width: 576px){
+  .other-work:hover {
+    height: 130%;
+    width: 100%;
+  }
+  section:hover .other-work:not(:hover) {
+    height: 70%;
   }
 }
 
@@ -120,7 +129,7 @@ section {
 
 @media (max-width: 576px) {
   section {
-    aspect-ratio: 3/2;
+    aspect-ratio: 4/2;
     flex-direction: column;
   }
 

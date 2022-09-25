@@ -280,7 +280,7 @@ h1.text-stroke:after {
     "info . ."
     "info description description"
     "problemes problemes ."
-    "solutions solutions ."
+    ". solutions solutions"
     ". cta cta";
   }
 
