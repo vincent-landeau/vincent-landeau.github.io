@@ -5,7 +5,7 @@
       <h2 id="aboutTitleStroke" class="text-stroke">{{ $t('home.about.subtitle')}}</h2>
     </div>
     <div class="content">
-      <p id="aboutText">{{ $t('home.about.description')}}</p>
+      <p id="aboutText" v-html="$t('home.about.description')"></p>
       <div id="aboutImage" class="image"/>
       <Cta href="#" :textstroke="$t('home.about.text-stroke-cta')" :highlighted="$t('home.about.text-highlighted-cta')"/>
     </div>

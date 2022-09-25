@@ -283,6 +283,16 @@ h1.text-stroke:after {
     "solutions solutions ."
     ". cta cta";
   }
+
+  .content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .content > div {
+    max-width: 100%;
+    width: 100%;
+    padding-bottom: 50px;
+  }
 }
 
 @media (max-width: 576px) {
