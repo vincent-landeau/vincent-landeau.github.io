@@ -9,7 +9,6 @@
           :slug=slug
           :title=work.title
           :subtitle=work.subtitle
-          :image=work.image
           :tl=tlWorkItems
           @kill-animations="killAnimations"></WorkItem>
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="cta">
+  <div v-if="href !== ''" class="cta">
     <a :href=href target="_blank"><span class="text-stroke">{{ textstroke }}</span><span class="highlighted">{{ highlighted }}</span></a>
   </div>
 </template>

@@ -6,7 +6,7 @@
     </div>
     <div id="workItemImage" class="image">
       <div class="content">
-        <img :src=image.src :alt=image.alt>
+        <img :src="`/${slug}/background.jpg`" :alt="`${title} ${subtitle}  background`">
       </div>
     </div>
   </a>
@@ -18,7 +18,7 @@ import {routerPush} from "@/router";
 
 export default {
   name: "WorkItem",
-  props: ["slug", "title", "subtitle", "image", "tl"],
+  props: ["slug", "title", "subtitle", "tl"],
   setup() {
     return {routerPush}
   },

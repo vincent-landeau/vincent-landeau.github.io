@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
-    <img id="logo" class="logo" src="/logo-rockendelire-blanc.png" alt="">
-    <img class="bg" src="/rockendelire-1.jpg" alt="">
+    <img id="logo" class="logo" :src="`/${$route.params.slug}/logo.png`" :alt="`${work['nav-label']} logo`" >
+    <img class="bg" :src="`/${$route.params.slug}/background.jpg`" :alt="`${work['nav-label']} background`">
   </div>
   <section class="container">
     <div class="title">
@@ -35,9 +35,9 @@
         <h4>{{ $t(`work-item.${$route.params.slug}.content.${index}.title`) }}</h4>
         <p>{{ $t(`work-item.${$route.params.slug}.content.${index}.text`) }}</p>
       </div>
-      <img v-if="item.type == 'image'" :src=item.src alt="">
-      <video v-else-if="item.type == 'local-video'" :src=item.src alt=""></video>
-      <iframe v-else-if="item.type == 'video'" :src=item.src frameborder="0"></iframe>
+      <img v-if="item.type == 'image'" :src="`/${$route.params.slug}${item.src}`" alt="">
+      <video v-else-if="item.type == 'local-video'" :src="`/${$route.params.slug}${item.src}`" alt=""></video>
+      <iframe v-else-if="item.type == 'video'" :src="`/${$route.params.slug}${item.src}`" frameborder="0"></iframe>
     </div>
   </section>
   <OtherWorks :key="componentKey" :slug=$route.params.slug></OtherWorks>
@@ -137,6 +137,7 @@ h1 {
   text-align: left;
   font-size: 7vw;
   line-height: 7vw;
+  text-shadow: 0px 0px 10px var(--color-background);
 }
 
 h1:not(.text-stroke) {
@@ -145,6 +146,7 @@ h1:not(.text-stroke) {
 
 h1.text-stroke {
   margin-left: 50%;
+  width: 100%;
 }
 
 h1.text-stroke:after {
@@ -245,10 +247,6 @@ h1.text-stroke:after {
   .container {
     margin-top: -4vw;
   }
-  h1 {
-    font-size: 10vw;
-    line-height: 10vw;
-  }
   .presentation {
     grid-template-areas:
     "info info description description description description"
@@ -261,8 +259,8 @@ h1.text-stroke:after {
     margin-top: -4vw;
   }
   h1 {
-    font-size: 12vw;
-    line-height: 12vw;
+    font-size: 9vw;
+    line-height: 9vw;
   }
 
   h1:not(.text-stroke) {
