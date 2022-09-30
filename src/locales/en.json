@@ -21,34 +21,42 @@
   "work-item": {
     "year": "Year",
     "roles": "Role | Roles",
-    "problems": "Problems",
+    "role-labels": {
+      "graphist": "Graphist",
+      "ux-ui": "UX / UI Designer",
+      "react": "React Developper",
+      "frontend": "Front-end Developper",
+      "backend": "Back-end Developper",
+      "unity": "Développeur Unity"
+    },
+    "challenges": "Challenges",
     "solutions": "Solutions",
     "visit-website-stroke": "Visit",
     "visit-website-highlighted": "Website",
     "rock-en-delire": {
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur Nulla viverra dolor a diam posuere, at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus nisi. Aenean dictum dui condimentum tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus",
-      "problems": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignim in urna at, molestie porttitor mi.",
-      "solutions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi.",
+      "description": "Rock en délire is a fictional project realized during my first year of DUT MMI. Our team was composed of a Redactor, a Community Manager and a Developer.<br><br>My personal goal for this project was to learn the ReactJS library, in order to facilitate the creation of one page web applications.",
+      "challenges": "The festival needed more visibility as well as to strengthen the fidelity of those who had come to the previous editions.",
+      "solutions": "We proposed a redesign of the logo as well as the development of a website in ReactJS without refreshment and with a local database in JSON.",
       "content": {
         "1": {
           "title": "The logo",
-          "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur."
+          "text": "For this redesign, we wanted to freshen up the image of the festival while keeping the Rock'n'Roll style. We opted for a typographic logo. The font was entirely created to represent this geometric and quirky side."
         }
       }
     },
     "la-bonne-moustache": {
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur Nulla viverra dolor a diam posuere, at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus nisi. Aenean dictum dui condimentum tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus",
-      "problems": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignim in urna at, molestie porttitor mi.",
+      "challenges": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignim in urna at, molestie porttitor mi.",
       "solutions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi."
     },
     "stanislac": {
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur Nulla viverra dolor a diam posuere, at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus nisi. Aenean dictum dui condimentum tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus",
-      "problems": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignim in urna at, molestie porttitor mi.",
+      "challenges": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignim in urna at, molestie porttitor mi.",
       "solutions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi."
     },
     "le-france": {
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur Nulla viverra dolor a diam posuere, at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus nisi. Aenean dictum dui condimentum tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus",
-      "problems": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignim in urna at, molestie porttitor mi.",
+      "challenges": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignim in urna at, molestie porttitor mi.",
       "solutions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi."
     }
   },

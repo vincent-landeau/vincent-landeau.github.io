@@ -4,7 +4,7 @@ export const works = {
         "title": "Rock en",
         "subtitle": "délire",
         "date": "2021",
-        "roles": ["Graphiste", "Concepteur UX / UI", "Developpeur React"],
+        "roles": ["graphist", "ux-ui", "react"],
         "url": "https://rockendelire.webflow.io",
         "content": [
             {
@@ -24,7 +24,7 @@ export const works = {
         "title": "La bonne",
         "subtitle": "Moustache",
         "date": "2020",
-        "roles": ["Intégrateur Bootstrap"],
+        "roles": ["frontend"],
         "url": "https://webiut.mickael.in/~usquikz/labonnemoustache/",
         "content": []
     },
@@ -33,7 +33,7 @@ export const works = {
         "title": "Stanislac",
         "subtitle": "Dataviz",
         "date": "2021",
-        "roles": ["Développeur"],
+        "roles": ["frontend"],
         "url": "",
         "content": []
     },
@@ -42,7 +42,7 @@ export const works = {
         "title": "Le France",
         "subtitle": "Experience RA",
         "date": "2022",
-        "roles": ["Développeur"],
+        "roles": ["unity", "ux-ui"],
         "url": "https://www.annecy-paysages.com/une-plongee-au-coeur-de-lhistoire-ap22/",
         "content": []
     },

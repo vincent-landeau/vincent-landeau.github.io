@@ -16,13 +16,13 @@
         </div>
         <div class="roles">
           <p class="info-title">{{ $tc(`work-item.roles`, rolesLength) }}</p>
-          <div v-for="role in work.roles">{{ role }}</div>
+          <div v-for="role in work.roles">{{ $t(`work-item.role-labels.${role}`) }}</div>
         </div>
       </div>
-      <div class="description">{{ $t(`work-item.${$route.params.slug}.description`) }}</div>
-      <div class="problemes">
-        <h4>{{ $t(`work-item.problems`) }}</h4>
-        <p>{{ $t(`work-item.${$route.params.slug}.problems`) }}</p>
+      <div class="description" v-html="$t(`work-item.${$route.params.slug}.description`)"></div>
+      <div class="challenges">
+        <h4>{{ $t(`work-item.challenges`) }}</h4>
+        <p>{{ $t(`work-item.${$route.params.slug}.challenges`) }}</p>
       </div>
       <div class="solutions">
         <h4>{{ $t(`work-item.solutions`) }}</h4>
@@ -72,7 +72,7 @@ export default {
     gsap.from('#introTitleStroke', {right: -100, duration: 1, ease: "power3.in", autoAlpha: 0})
     gsap.from('.info', {top: 100, duration: 1.5, autoAlpha: 0})
     gsap.from('.description', {top: 200, duration: 1, autoAlpha: 0})
-    gsap.from('.problemes', {top: 200, duration: 1, autoAlpha: 0})
+    gsap.from('.challenges', {top: 200, duration: 1, autoAlpha: 0})
     gsap.from('.solutions', {top: 100, duration: 2, autoAlpha: 0})
   },
   updated() {
@@ -168,7 +168,7 @@ h1.text-stroke:after {
   gap: 50px 0px;
   grid-template-areas:
     "info info . description description description"
-    ". problemes problemes . solutions solutions"
+    ". challenges challenges . solutions solutions"
     ". cta cta cta cta cta";
 }
 
@@ -199,8 +199,8 @@ h1.text-stroke:after {
   text-align: justify;
 }
 
-.problemes {
-  grid-area: problemes;
+.challenges {
+  grid-area: challenges;
 }
 
 .solutions {
@@ -250,7 +250,7 @@ h1.text-stroke:after {
   .presentation {
     grid-template-areas:
     "info info description description description description"
-    ". problemes problemes . solutions solutions"
+    ". challenges challenges . solutions solutions"
     ". cta cta cta cta cta";
   }
 }
@@ -277,7 +277,7 @@ h1.text-stroke:after {
     grid-template-areas:
     "info . ."
     "info description description"
-    "problemes problemes ."
+    "challenges challenges ."
     ". solutions solutions"
     ". cta cta";
   }
@@ -300,7 +300,7 @@ h1.text-stroke:after {
     grid-template-areas:
     "info info info"
     "description description description"
-    "problemes problemes ."
+    "challenges challenges ."
     ". solutions solutions"
     "cta cta cta";
   }
