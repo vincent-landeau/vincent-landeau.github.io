@@ -7,12 +7,12 @@ export function loadCursor() {
             scale: 1.6
         }).reversed(true)
     document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mousedown", onMouseHover);
-    document.addEventListener("mouseup", onMouseHover);
+    // document.addEventListener("mousedown", onMouseHover);
+    // document.addEventListener("mouseup", onMouseHover);
 }
 
 export function loadMouseHover() {
-    document.querySelectorAll("a").forEach((element) => {
+    document.querySelectorAll("a, .cursor-hover").forEach((element) => {
         element.addEventListener("mouseover", onMouseHover);
         element.addEventListener("mouseout", onMouseHover);
     })
@@ -44,6 +44,6 @@ function onMouseMove(e) {
     });
 }
 
-function onMouseHover() {
+export function onMouseHover() {
     tl.reversed(!tl.reversed());
 }

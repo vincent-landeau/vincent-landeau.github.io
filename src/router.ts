@@ -4,6 +4,7 @@ import Home from './pages/Home.vue'
 import Work from './pages/Work.vue'
 import NotFound from './pages/NotFound.vue'
 import {gsap} from "gsap";
+import {onMouseHover} from "./cursor"
 
 export type AppRouteNames =
     | 'home'
@@ -32,7 +33,7 @@ export const router = createRouter({
     routes,
 })
 
-export function routerPush(name: AppRouteNames, refName?: String, params?: RouteParams): ReturnType<typeof router.push>  {
+export function routerPush(name: AppRouteNames, refName?: String, params?: RouteParams, resetMouseHover = true): ReturnType<typeof router.push>  {
     let newRoute;
     if (params !== undefined) {
         newRoute = router.push({
@@ -50,5 +51,8 @@ export function routerPush(name: AppRouteNames, refName?: String, params?: Route
         return
     }
     newRoute.then(() => { scrollTo(0, 0)})
+    if (resetMouseHover) {
+        onMouseHover()
+    }
 }
 
