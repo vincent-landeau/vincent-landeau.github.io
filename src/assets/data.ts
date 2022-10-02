@@ -4,7 +4,7 @@ export const works = {
         "title": "Rock en",
         "subtitle": "délire",
         "date": "2021",
-        "roles": ["graphist", "ux-ui", "react"],
+        "roles": ["graphist", "ux-ui", "frontend"],
         "url": "https://rockendelire.webflow.io",
         "content": [
             {
@@ -42,7 +42,7 @@ export const works = {
         "title": "Le France",
         "subtitle": "Experience RA",
         "date": "2022",
-        "roles": ["unity", "ux-ui"],
+        "roles": ["game", "ux-ui"],
         "url": "https://www.annecy-paysages.com/une-plongee-au-coeur-de-lhistoire-ap22/",
         "content": []
     },

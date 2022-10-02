@@ -19,7 +19,7 @@
           <div v-for="role in work.roles">{{ $t(`work-item.role-labels.${role}`) }}</div>
         </div>
       </div>
-      <div class="description" v-html="$t(`work-item.${$route.params.slug}.description`)"></div>
+      <div class="description" v-html="$t(`work-item.${$route.params.slug}.description`, { br: '<br>'})"></div>
       <div class="challenges">
         <h4>{{ $t(`work-item.challenges`) }}</h4>
         <p>{{ $t(`work-item.${$route.params.slug}.challenges`) }}</p>

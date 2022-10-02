@@ -8,7 +8,7 @@
       "nav-label": "About",
       "title": "About",
       "subtitle": "me",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie\n        porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna\n        nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur. Nulla viverra dolor a diam posuere,\n        at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus nisi. Aenean dictum dui condimentum\n        tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus, id lacinia ipsum lacinia.<br>\n        <br>\n        Vestibulum ac eros interdum, laoreet urna ultrices, tristique nibh. Nam ut risus sit amet tortor fringilla\n        eleifend at nec ipsum. Sed fringilla ante at ante venenatis malesuada. Sed facilisis magna ante, sit amet\n        molestie orci eleifend eget. Cras non convallis ex. Aenean augue mauris, malesuada vel condimentum non, dapibus\n        non urna. Fusce euismod gravida tristique. Sed sed dolor vitae lacus aliquet ullamcorper et quis lectus.",
+      "description": "Graduated from a Bachelor Gobelins Interactive Developer, I am passionate about programming since high school when I made a website to showcase my graduation project. Having enjoyed developing it, I oriented my studies around this field to learn more about it. From Wordpress to React, through Unity, I discovered many technologies during my 3 years of study and was also able to put them into practice during my 2 years of apprenticeship in the AC Web Design agency.{br}{br}During my last year of training, I discovered mobile application development and game development with Unity, Swift, but also Android Studio which gave me the desire to learn more about these two subjects. I also realized an interactive augmented reality experience with Les Naufragés for Annecy paysages, an outdoor festival in the city of Annecy.",
       "text-stroke-cta": "Download",
       "text-highlighted-cta": "my CV"
     },
@@ -23,20 +23,19 @@
     "roles": "Role | Roles",
     "role-labels": {
       "graphist": "Graphist",
-      "ux-ui": "UX / UI Designer",
-      "react": "React Developper",
-      "frontend": "Front-end Developper",
-      "backend": "Back-end Developper",
-      "unity": "Développeur Unity"
+      "ux-ui": "UX / UI designer",
+      "frontend": "Front-end developper",
+      "backend": "Back-end developper",
+      "game": "Game developper"
     },
-    "challenges": "Challenges",
+    "challenges": "Challenge",
     "solutions": "Solutions",
     "visit-website-stroke": "Visit",
     "visit-website-highlighted": "Website",
     "rock-en-delire": {
-      "description": "Rock en délire is a fictional project realized during my first year of DUT MMI. Our team was composed of a Redactor, a Community Manager and a Developer.<br><br>My personal goal for this project was to learn the ReactJS library, in order to facilitate the creation of one page web applications.",
-      "challenges": "The festival needed more visibility as well as to strengthen the fidelity of those who had come to the previous editions.",
-      "solutions": "We proposed a redesign of the logo as well as the development of a website in ReactJS without refreshment and with a local database in JSON.",
+      "description": "Rock en délire is a fictional project realized during my first year of DUT MMI. The client was a rock festival located in Nantes. Our team was composed of a Writer, a Community Manager and a Developper.{br}{br}The event wanted to have more visibility as well as to reinforce the loyalty of the people who came to the previous edition.",
+      "challenges": "Create a showcase site without refreshment and with a local database in JSON while learning ReactJS, a Javascript library to facilitate the creation of web applications.",
+      "solutions": "Redesign of the logo, improve their communication on social networks by creating story templates for instagram and an editorial chart and the development of a website.",
       "content": {
         "1": {
           "title": "The logo",
@@ -45,23 +44,24 @@
       }
     },
     "la-bonne-moustache": {
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur Nulla viverra dolor a diam posuere, at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus nisi. Aenean dictum dui condimentum tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus",
-      "challenges": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignim in urna at, molestie porttitor mi.",
-      "solutions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi."
+      "description": "La bonne Moustache is a fictional project realized during my DUT MMI. The client was a Barber Shop located in Blois. To meet his needs, we worked as a team of a Community Manager and a Developer. {br}{br} Our client had just started his business and needed to be known quickly. He therefore needed a fast and efficient solution.",
+      "challenges": "Develop in one day a showcase site from scratch with Bootstrap, a collection of useful tools for styling a site.",
+      "solutions": "Adaptation and launch of a free Bootstrap website template according to the client's requests as well as the creation and management of their social network: Instagram."
     },
     "stanislac": {
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur Nulla viverra dolor a diam posuere, at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus nisi. Aenean dictum dui condimentum tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus",
-      "challenges": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignim in urna at, molestie porttitor mi.",
-      "solutions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi."
+      "description": "Stanislac is a project in collaboration with the tourism office of Annecy realized during my Bachelor Gobelins Interactive Developer. They were looking for a way to make the data they had collected about the city's events more readable.",
+      "challenges": "Display the data provided by the client in a way that is easy to understand for all types of users.",
+      "solutions": "Realization of a website showing the different events on a map with the display of the details of the user's selection."
     },
     "le-france": {
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi. Proin tempor, lectus quis laoreet feugiat, odio justo imperdiet urna, sit amet luctus arcu magna nec nibh. Proin accumsan augue eu massa luctus, sed varius orci consectetur Nulla viverra dolor a diam posuere, at egestas lacus sollicitudin. Aenean vel vehicula nisl, vitae rhoncus nisi. Aenean dictum dui condimentum tellus pulvinar sagittis non a erat. Fusce aliquet sem quis odio cursus",
-      "challenges": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignim in urna at, molestie porttitor mi.",
-      "solutions": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem ante, dignissim in urna at, molestie porttitor mi."
+      "description": "Une plongée au coeur de l'histoire is a project realized for the Annecy paysages festival by Les Naufragés, a team of four students in their third year of the Bachelor Gobelins Interactive Developer & Designer diploma.{br}{br}We worked in collaboration with Bonlieu Scène Nationale, the organiser of this festival, as well as Async Studio, the agency developing the event's app and who proposed the addition of these new experiences for the 2022 edition.",
+      "challenges": "Design and develop an interactive augmented reality experience in 6 months while learning the Unity game engine.",
+      "solutions": "An interactive augmented reality experience featuring the resurrection of the France, the emblematic boat of the city of Annecy."
     }
   },
   "not-found": {
     "title": "Oups! You're at the wrong place",
     "go-back": "Go back to the good place"
-  }
+  },
+  "copyright" : "All rights reserved"
 }
