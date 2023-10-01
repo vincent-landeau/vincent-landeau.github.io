@@ -63,7 +63,7 @@ export default {
   background:
       linear-gradient(0deg, rgba(30, 30, 30, 0.3), rgba(30, 30, 30, 0.3)),
       linear-gradient(0deg, rgba(150, 120, 182, 0.3), rgba(150, 120, 182, 0.3)),
-      url('./pp.jpg');
+      url('./profile.jpg');
   background-size: cover;
 }
 

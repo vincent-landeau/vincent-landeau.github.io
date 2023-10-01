@@ -1,13 +1,17 @@
 <template>
   <Intro />
   <About />
-  <Works />
+  <Clients />
+  <Contact />
+  <!-- <Works /> -->
 </template>
 
 <script setup lang="ts">
 import Intro from '../components/Intro.vue'
 import About from '../components/About.vue'
-import Works from '../components/Works.vue'
+import Clients from '../components/Clients.vue'
+import Contact from '../components/Contact.vue'
+// import Works from '../components/Works.vue'
 </script>
 
 <script lang="ts">

@@ -5,7 +5,7 @@ export const works = {
         "subtitle": "délire",
         "date": "2021",
         "roles": ["graphist", "ux-ui", "frontend"],
-        "url": "https://rockendelire.webflow.io",
+        "url": "https://vincent-landeau.github.io/rock-en-delire/",
         "content": [
             {
                 text: false,
@@ -43,7 +43,35 @@ export const works = {
         "subtitle": "Experience RA",
         "date": "2022",
         "roles": ["game", "ux-ui"],
-        "url": "https://www.annecy-paysages.com/une-plongee-au-coeur-de-lhistoire-ap22/",
-        "content": []
+        "url": "https://www.annecy-paysages.com/une-plongee-au-coeur-de-lhistoire-ap23/",
+        "content": [
+            {
+                text: false,
+                type: 'image',
+                src: '/site.png',
+            },
+            
+        ]
     },
 };
+
+export const clients = {
+    "acwd" : {
+        "nav-label": "acwd",
+        "title": "Agence",
+        "subtitle": "AC Webdesign",
+        "url": "https://acwd.fr/"
+    },
+    "antirouille" : {
+        "nav-label": "antirouille",
+        "title": "Antirouille",
+        "subtitle": "Communication",
+        "url": "https://antirouille-blog.com/"
+    },
+    "annecypaysages" : {
+        "nav-label": "antirouille",
+        "title": "Annecy",
+        "subtitle": "paysages",
+        "url": "https://www.annecy-paysages.com/une-plongee-au-coeur-de-lhistoire-ap23/"
+    }
+}

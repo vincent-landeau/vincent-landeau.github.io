@@ -68,7 +68,7 @@ export default {
       showDropdown: false,
       navTl: [],
       bulletPointActive: 'intro',
-      navItems: ['intro', 'about', 'works']
+      navItems: ["intro", "about", "clients", "contact"]
     }
   },
   setup(){
@@ -79,7 +79,7 @@ export default {
     document.addEventListener("scroll", () => {
       if (document.querySelector(".navigation").style.display !== "none") {
         const offsetScrollY = scrollY + screen.height / 5
-        document.querySelectorAll("section").forEach((section) => {
+        document.querySelectorAll("section.container").forEach((section) => {
           let id = section.id.replace('section-', '');
           if (offsetScrollY > section.offsetTop && offsetScrollY < (section.offsetHeight + section.offsetTop) && !document.querySelector(".nav-item #" + id).previousElementSibling.classList.contains("active")) {
             this.bulletPointActive = id;
@@ -224,7 +224,7 @@ export default {
   height: 39px;
 }
 .nav-item:not(:last-child) {
-  margin-bottom: 100px;
+  margin-bottom: 75px;
 }
 .nav-item:not(:last-child):after {
   content: "";
@@ -232,7 +232,7 @@ export default {
   display: block;
   margin-left: 10px;
   width: 1px;
-  height: 100px;
+  height: 75px;
   background-color: #d9d9d9;
 }
 

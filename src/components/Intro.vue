@@ -2,7 +2,19 @@
   <section id="section-intro">
     <div class="content">
       <h1 id="introTitle">Vincent <span class="highlighted">Landeau</span></h1>
-      <h2 id="introTitleStroke" class="text-stroke">{{ $t('home.intro.subtitle')}}</h2>
+      <h2 class="text-stroke scrolling-words-container">
+        <span>{{ $t('home.intro.subtitle') }}</span>
+        <div class="scrolling-words-box">
+          <ul>
+            <li>freelance</li>
+            <li>front-end</li>
+            <li>back-end</li>
+            <li>mobile</li>
+            <li>fullstack</li>
+            <li>freelance</li>
+          </ul>
+        </div>
+      </h2>
     </div>
   </section>
 </template>
@@ -45,6 +57,65 @@ section {
 
 h2 {
   padding-left: 150px;
+}
+
+.scrolling-words-container {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+:lang(en) .scrolling-words-container {
+  flex-direction: row-reverse;
+}
+
+:lang(fr) .scrolling-words-container {
+  text-transform: capitalize;
+}
+
+.scrolling-words-box {
+  height: 7rem;
+  overflow: hidden;
+}
+.scrolling-words-box ul {
+  margin: 0 0.625rem;
+  padding: 0;
+  animation: scrollUp 8s infinite;
+}
+.scrolling-words-box ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 7rem;
+  list-style: none;
+}
+:lang(en) .scrolling-words-box ul li {
+  justify-content: flex-end;
+  text-transform: capitalize;
+}
+
+@keyframes scrollUp {
+  16.6666666667%, 33.3333333333% {
+    transform: translateY(-16.6666666667%);
+  }
+  33.3333333333%, 50% {
+    transform: translateY(-33.3333333333%);
+  }
+  50%, 66.6666666667% {
+    transform: translateY(-50%);
+  }
+  66.6666666667%, 83.3333333333% {
+    transform: translateY(-66.6666666667%);
+  }
+  83.3333333333%, 100% {
+    transform: translateY(-83.3333333333%);
+  }
+}
+
+@media (min-width: 768px) {
+.scrolling-words-box {
+  margin: auto;
+  padding: 0 1rem;
+}
 }
 @media (max-width: 768px) {
   .content {

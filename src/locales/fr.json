@@ -2,7 +2,7 @@
   "home": {
     "intro": {
       "nav-label": "Intro",
-      "subtitle": "Developpeur full-stack"
+      "subtitle": "développeur"
     },
     "about": {
       "nav-label": "À propos",
@@ -16,6 +16,16 @@
       "nav-label": "Réalisations",
       "title": "Mes",
       "subtitle": "Réalisations"
+    },
+    "clients": {
+      "nav-label": "Recommendations",
+      "title": "Ils m'ont",
+      "subtitle": "fait confiance"
+    },
+    "contact": {
+      "nav-label": "Contact",
+      "title": "Contactez",
+      "subtitle": "moi sur..."
     }
   },
   "work-item": {

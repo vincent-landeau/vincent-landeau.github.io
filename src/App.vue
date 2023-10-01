@@ -23,10 +23,25 @@ export default {
       loadCursor()
       loadMouseHover()
     }
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    this.changeIcon(mediaQuery)
+    mediaQuery.addEventListener('change', this.changeIcon)
+
   },
   created() {
     navigatorCloseLanguage()
-  }
+  },
+  methods: {
+    changeIcon: (event) => {
+      const faviconEl = document.querySelector('link[rel="icon"]')
+      if (event.matches) {
+        faviconEl.setAttribute('href', '/dist/favicon-dark.ico')
+      } else {
+        faviconEl.setAttribute('href', '/dist/favicon-light.ico')
+      }
+    }
+  },
 }
 </script>
 
