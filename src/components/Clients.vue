@@ -1,8 +1,8 @@
 <template>
     <section id="section-clients" class="container">
       <div class="title">
-        <h2 id="clientTitle">{{ $t('home.clients.title') }}</h2>
-        <h2 id="clientTitleStroke" class="text-stroke">{{ $t('home.clients.subtitle') }}</h2>
+        <h2 id="clientsTitle">{{ $t('home.clients.title') }}</h2>
+        <h2 id="clientsTitleStroke" class="text-stroke">{{ $t('home.clients.subtitle') }}</h2>
       </div>
       <div id="clientItems" class="content">
         <Carousel :items-to-show="3" :wrap-around="true">
@@ -36,27 +36,24 @@ export default {
   },
   setup () {
     return { clients }
+  },
+  mounted() {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: "#section-clients",
+        scrub: 1,
+        start: "top bottom",
+        end: "+=100%"
+      }
+    }).from('#clientsTitle', 2, {left: -150, autoAlpha: 0}, 0)
+      .from('#clientsTitleStroke', 2, {right: -150, autoAlpha: 0}, 0)
   }
-
 }
 </script>
 
 <style scoped>
 .carousel {
   margin-top: 10vh;
-}
-
-@media (min-width: 768px) {
-  .client-item:nth-of-type(even) {
-    position: relative;
-    top: 150px;
-  }
-}
-
-@media (max-width: 768px) {
-  .content {
-    grid-template-columns: 1fr;
-    padding-top: 50px;
-  }
 }
 </style>
