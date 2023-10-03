@@ -36,9 +36,9 @@ export default {
     changeIcon: (event) => {
       const faviconEl = document.querySelector('link[rel="icon"]')
       if (event.matches) {
-        faviconEl.setAttribute('href', '/dist/favicon-dark.ico')
+        faviconEl.setAttribute('href', '/favicon-dark.ico')
       } else {
-        faviconEl.setAttribute('href', '/dist/favicon-light.ico')
+        faviconEl.setAttribute('href', '/favicon-light.ico')
       }
     }
   },
