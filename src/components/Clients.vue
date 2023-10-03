@@ -5,7 +5,16 @@
         <h2 id="clientsTitleStroke" class="text-stroke">{{ $t('home.clients.subtitle') }}</h2>
       </div>
       <div id="clientItems" class="content">
-        <Carousel :items-to-show="3" :wrap-around="true">
+        <Carousel :items-to-show="3" :wrap-around="true" class="desktop">
+          <Slide v-for="(client,slug) in clients" :key="slug">
+            <ClientItem
+                :slug=slug
+                :title=client.title
+                :subtitle=client.subtitle
+                :url=client.url></ClientItem>
+          </Slide>
+        </Carousel>
+        <Carousel :items-to-show="2" :wrap-around="true" class="mobile">
           <Slide v-for="(client,slug) in clients" :key="slug">
             <ClientItem
                 :slug=slug
@@ -48,12 +57,28 @@ export default {
       }
     }).from('#clientsTitle', 2, {left: -150, autoAlpha: 0}, 0)
       .from('#clientsTitleStroke', 2, {right: -150, autoAlpha: 0}, 0)
+    
   }
 }
 </script>
 
 <style scoped>
+section.container {
+    max-width: none;
+    width: 100%;
+}
 .carousel {
   margin-top: 10vh;
+}
+
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
 }
 </style>

@@ -52,7 +52,7 @@ footer span {
   transition: width .4s ease-out;
 }
 
-@media only screen {
+@media (hover) {
   .mail:hover:after,
   .mail:hover:before {
     width: 0%;

@@ -37,12 +37,15 @@ export default {
 
 .contact-link {
   display: block;
-  width: 350px;
+  width: 50vw;
+  max-width: 250px;
   margin: 10vh auto;
   transition: scale .4s;
 }
-.contact-link:hover {
-  scale: 1.1;
+@media (hover) {
+  .contact-link:hover {
+    scale: 1.1;
+  } 
 }
 .contact-link img {
   width: 100%;

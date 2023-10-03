@@ -41,14 +41,17 @@ export default {
   transition: opacity .4s;
   z-index: 999;
 }
-.client-item:hover .client-title {
-  opacity: 1;
-}
 .client-item img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   transition: opacity .4s;
+}
+
+@media (hover) {
+  .client-item:hover .client-title {
+    opacity: 1;
+  }
 }
 .client-item:hover img {
   opacity: .3;

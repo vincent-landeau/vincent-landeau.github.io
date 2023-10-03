@@ -2,19 +2,19 @@
   <section id="section-intro">
     <div class="content">
       <h1 id="introTitle">Vincent <span class="highlighted">Landeau</span></h1>
-      <h2 class="text-stroke scrolling-words-container">
-        <span>{{ $t('home.intro.subtitle') }}</span>
+      <div id="introTitleStroke" class="scrolling-words-container">
+        <h2 class="text-stroke">{{ $t('home.intro.subtitle') }}</h2>
         <div class="scrolling-words-box">
           <ul>
-            <li>freelance</li>
-            <li>front-end</li>
-            <li>back-end</li>
-            <li>mobile</li>
-            <li>fullstack</li>
-            <li>freelance</li>
+            <li><h2 class="text-stroke">freelance</h2></li>
+            <li><h2 class="text-stroke">front-end</h2></li>
+            <li><h2 class="text-stroke">back-end</h2></li>
+            <li><h2 class="text-stroke">mobile</h2></li>
+            <li><h2 class="text-stroke">fullstack</h2></li>
+            <li><h2 class="text-stroke">freelance</h2></li>
           </ul>
         </div>
-      </h2>
+      </div>
     </div>
   </section>
 </template>
@@ -42,21 +42,12 @@ export default {
 
 <style scoped>
 section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   margin-top: 5vh;
-  height: 45vh;
-  position: relative;
-  margin-bottom: 40vh;
-}
-
-.content {
-  position: absolute;
-  bottom: 0;
-  transform: translateY(50%);
-  right: 8vw;
-}
-
-h2 {
-  padding-left: 150px;
+  height: 95vh;
+  margin-bottom: 0;
 }
 
 .scrolling-words-container {
@@ -68,7 +59,7 @@ h2 {
   flex-direction: row-reverse;
 }
 
-:lang(fr) .scrolling-words-container {
+:lang(fr) .scrolling-words-container > h2 {
   text-transform: capitalize;
 }
 
@@ -77,9 +68,10 @@ h2 {
   overflow: hidden;
 }
 .scrolling-words-box ul {
-  margin: 0 0.625rem;
-  padding: 0;
+  padding-right: .5vw;
+  padding-left: 0;
   animation: scrollUp 8s infinite;
+  animation-delay: 2s;
 }
 .scrolling-words-box ul li {
   display: flex;
@@ -110,27 +102,37 @@ h2 {
     transform: translateY(-83.3333333333%);
   }
 }
+:lang(fr) .scrolling-words-box {
+  margin: auto;
+  padding-left: 1.5vw;
+}
+:lang(en) .scrolling-words-container > h2 {
+  padding-left: 1.5vw;
+}
 
 @media (min-width: 768px) {
-.scrolling-words-box {
-  margin: auto;
-  padding: 0 1rem;
-}
+  .content {
+    padding-right: 5vw;
+  }
+  .scrolling-words-container {
+    padding-left: 150px;
+  }
 }
 @media (max-width: 768px) {
   .content {
     right: 0;
     left: 0;
   }
+  .scrolling-words-container, section {
+    justify-content: center;
+  }
   h1 {
-    padding-left: 2vw;
     font-size: 12vw;
     line-height: 18vw;
   }
   h2 {
     font-size: 9vw;
     padding-left: 0;
-    padding-right: 2vw;
     text-align: right;
   }
 }
