@@ -64,21 +64,27 @@ export default {
 
 <style scoped>
 section.container {
-    max-width: none;
-    width: 100%;
+    max-width: 950px;
+    width: 65vw;
 }
 .carousel {
   margin-top: 10vh;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .mobile {
     display: none;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .desktop {
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  section.container {
+    max-width: none;
+    width: 100%;
   }
 }
 </style>
