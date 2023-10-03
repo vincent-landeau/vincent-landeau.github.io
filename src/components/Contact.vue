@@ -5,7 +5,7 @@
       <h2 id="contactTitleStroke" class="text-stroke">{{ $t('home.contact.subtitle') }}</h2>
     </div>
     <a class="contact-link" href="https://www.malt.fr/profile/vincentlandeau" target="_blank">
-      <img src="/dist/Malt_logo_pink.png" alt="logo Malt">
+      <img src="/Malt_logo_pink.png" alt="logo Malt">
     </a>
   </section>
 </template>
