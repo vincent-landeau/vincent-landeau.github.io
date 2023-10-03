@@ -1,4 +1,4 @@
-{
+export const fr = {
   "home": {
     "intro": {
       "nav-label": "Intro",

@@ -1,10 +1,11 @@
 import {createI18n} from 'vue-i18n'
-import messages from './assets/locales/en.json'
+import { en } from './assets/locales/en'
+import { fr } from './assets/locales/fr'
 
 export const i18n = createI18n({
     locale: 'en',
     fallbackLocale: 'en',
-    messages: { 'en': messages }
+    messages: { 'en': en, 'fr': fr }
 })
 
 const loadedLanguages = ['en']
@@ -33,11 +34,7 @@ export function navigatorCloseLanguage () {
 export function loadLanguageAsync (lang) {
     if (i18n.global.locale !== lang) {
         if (!loadedLanguages.includes(lang)) {
-            return import( `./assets/locales/${lang}`).then(msgs => {
-                i18n.global.setLocaleMessage(lang, msgs.default)
-                loadedLanguages.push(lang)
-                return setI18nLanguage(lang)
-            })
+            setI18nLanguage(lang)
         }
         return Promise.resolve(setI18nLanguage(lang))
     }

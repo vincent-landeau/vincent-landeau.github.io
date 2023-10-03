@@ -1,4 +1,4 @@
-{
+export const en = {
   "home": {
     "intro": {
       "nav-label": "Intro",
