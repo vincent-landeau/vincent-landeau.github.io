@@ -52,9 +52,9 @@ export default {
   .client-item:hover .client-title {
     opacity: 1;
   }
-}
-.client-item:hover img {
+  .client-item:hover img {
   opacity: .3;
+}
 }
 
 @media (max-width: 768px) {

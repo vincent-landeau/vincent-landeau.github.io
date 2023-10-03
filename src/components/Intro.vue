@@ -1,17 +1,17 @@
 <template>
-  <section id="section-intro">
+  <section id="section-intro" class="container">
     <div class="content">
       <h1 id="introTitle">Vincent <span class="highlighted">Landeau</span></h1>
-      <div id="introTitleStroke" class="scrolling-words-container">
-        <h2 class="text-stroke">{{ $t('home.intro.subtitle') }}</h2>
+      <div id="introTitleStroke" class="text-stroke scrolling-words-container">
+        <h2>{{ $t('home.intro.subtitle') }}</h2>
         <div class="scrolling-words-box">
           <ul>
-            <li><h2 class="text-stroke">freelance</h2></li>
-            <li><h2 class="text-stroke">front-end</h2></li>
-            <li><h2 class="text-stroke">back-end</h2></li>
-            <li><h2 class="text-stroke">mobile</h2></li>
-            <li><h2 class="text-stroke">fullstack</h2></li>
-            <li><h2 class="text-stroke">freelance</h2></li>
+            <li><h2>freelance</h2></li>
+            <li><h2>front-end</h2></li>
+            <li><h2>back-end</h2></li>
+            <li><h2>mobile</h2></li>
+            <li><h2>fullstack</h2></li>
+            <li><h2>freelance</h2></li>
           </ul>
         </div>
       </div>
@@ -50,6 +50,11 @@ section {
   margin-bottom: 0;
 }
 
+section.container {
+    max-width: none;
+    width: 100%;
+}
+
 .scrolling-words-container {
   display: flex;
   align-items: center;
@@ -68,8 +73,7 @@ section {
   overflow: hidden;
 }
 .scrolling-words-box ul {
-  padding-right: .5vw;
-  padding-left: 0;
+  padding: 0 2vw;
   animation: scrollUp 8s infinite;
   animation-delay: 2s;
 }
@@ -102,13 +106,6 @@ section {
     transform: translateY(-83.3333333333%);
   }
 }
-:lang(fr) .scrolling-words-box {
-  margin: auto;
-  padding-left: 1.5vw;
-}
-:lang(en) .scrolling-words-container > h2 {
-  padding-left: 1.5vw;
-}
 
 @media (min-width: 768px) {
   .content {
@@ -125,6 +122,9 @@ section {
   }
   .scrolling-words-container, section {
     justify-content: center;
+  }
+  .scrolling-words-box ul {
+    padding: 0 3vw;
   }
   h1 {
     font-size: 12vw;
