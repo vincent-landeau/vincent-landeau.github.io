@@ -18,7 +18,7 @@ export const fr = {
       "subtitle": "Réalisations"
     },
     "clients": {
-      "nav-label": "Recommendations",
+      "nav-label": "Recommandations",
       "title": "Ils m'ont",
       "subtitle": "fait confiance"
     },

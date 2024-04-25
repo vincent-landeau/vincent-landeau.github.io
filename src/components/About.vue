@@ -7,7 +7,7 @@
     <div class="content">
       <p id="aboutText" v-html="$t('home.about.description', { br: '<br>'})"></p>
       <div id="aboutImage" class="image"/>
-      <Cta href="#" :textstroke="$t('home.about.text-stroke-cta')" :highlighted="$t('home.about.text-highlighted-cta')"/>
+      <Cta :href="'/cv/' + i18n.global.locale + '.pdf'" :textstroke="$t('home.about.text-stroke-cta')" :highlighted="$t('home.about.text-highlighted-cta')"/>
     </div>
   </section>
 </template>
@@ -16,10 +16,14 @@
 import Cta from '../components/Cta.vue'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { i18n } from '@/i18n'
 
 export default {
   name: "About",
   components: {Cta},
+  setup () {
+    return { i18n }
+  },
   mounted() {
     gsap.registerPlugin(ScrollTrigger);
     gsap.timeline({scrollTrigger:{
