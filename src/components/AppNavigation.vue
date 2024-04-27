@@ -41,9 +41,9 @@
       <nav>
         <ul>
           <li v-for="navItem in navItems" class="text-stroke cursor-hover" v-on:click="routerPush('home', navItem, undefined, false); showDropdown = !showDropdown">{{ $t(`home.${navItem}.nav-label`) }}</li>
-          <!-- <ul>
+          <ul>
             <li v-for="(work, key) in works" class="text-stroke cursor-hover" v-on:click="routerPush( 'work-item', undefined, { slug: key }, false); showDropdown = !showDropdown">{{ work['nav-label'] }}</li>
-          </ul> -->
+          </ul>
         </ul>
 
       </nav>
@@ -68,7 +68,7 @@ export default {
       showDropdown: false,
       navTl: [],
       bulletPointActive: 'intro',
-      navItems: ["intro", "about", "clients", "contact"]
+      navItems: ["intro", "about", "clients", "works"]
     }
   },
   setup(){

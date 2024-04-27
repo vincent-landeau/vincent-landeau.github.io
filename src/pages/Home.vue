@@ -2,16 +2,16 @@
   <Intro />
   <About />
   <Clients />
-  <Contact />
-  <!-- <Works /> -->
+  <Works />
+  <!-- <Contact /> -->
 </template>
 
 <script setup lang="ts">
 import Intro from '../components/Intro.vue'
 import About from '../components/About.vue'
+import Works from '../components/Works.vue'
 import Clients from '../components/Clients.vue'
-import Contact from '../components/Contact.vue'
-// import Works from '../components/Works.vue'
+// import Contact from '../components/Contact.vue'
 </script>
 
 <script lang="ts">

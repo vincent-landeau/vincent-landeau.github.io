@@ -53,11 +53,6 @@ export const en = {
         }
       }
     },
-    "la-bonne-moustache": {
-      "description": "La bonne Moustache is a fictional project realized during my DUT MMI. The client was a Barber Shop located in Blois. To meet his needs, we worked as a team of a Community Manager and a Developer. {br}{br} Our client had just started his business and needed to be known quickly. He therefore needed a fast and efficient solution.",
-      "challenges": "Develop in one day a showcase site from scratch with Bootstrap, a collection of useful tools for styling a site.",
-      "solutions": "Adaptation and launch of a free Bootstrap website template according to the client's requests as well as the creation and management of their social network: Instagram."
-    },
     "stanislac": {
       "description": "Stanislac is a project in collaboration with the tourism office of Annecy realized during my Bachelor Gobelins Interactive Developer. They were looking for a way to make the data they had collected about the city's events more readable.",
       "challenges": "Display the data provided by the client in a way that is easy to understand for all types of users.",

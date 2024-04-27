@@ -19,15 +19,6 @@ export const works = {
             },
         ]
     },
-    "la-bonne-moustache": {
-        "nav-label": "La bonne Moustache",
-        "title": "La bonne",
-        "subtitle": "Moustache",
-        "date": "2020",
-        "roles": ["frontend"],
-        "url": "https://webiut.mickael.in/~usquikz/labonnemoustache/",
-        "content": []
-    },
     "stanislac": {
         "nav-label": "Stanislac",
         "title": "Stanislac",

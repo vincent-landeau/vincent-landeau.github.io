@@ -53,11 +53,6 @@ export const fr = {
         }
       }
     },
-    "la-bonne-moustache": {
-      "description": "La bonne Moustache est un projet fictif réalisé durant mon DUT MMI. Le client était un Barber Shop situé à Blois. Pour répondre à ses besoins, nous étions une équipe d'un Community Manager et un Développeur. {br}{br} Notre client venait  tout juste de démarrer son entreprise et avait besoin de se faire connaître rapidement. Il avait donc besoin de solutions rapide et efficace.",
-      "challenges": "Réaliser en une journée un site vitrine de zéro avec Bootstrap, une collection d'outils utiles à la stylisation d'un site.",
-      "solutions": "Adaptation et mise en ligne d'un modèle de site Bootstrap gratuit aux demandes du client ainsi que la création et la gestion de leur réseau social : Instagram."
-    },
     "stanislac": {
       "description": "Stanislac est un projet en collaboration avec l'office de tourisme de Annecy réalisé durant mon Bachelor Gobelins Développeur Interactif. Ils souhaitaient rendre plus lisibles les données des évènements de la ville qu'ils avaient récupéré.",
       "challenges": "Représenter les données fournies par le client de façon à ce qu'elle soit ordonner selon des critères simples et compréhensible par tous types d'utilisateur.",
