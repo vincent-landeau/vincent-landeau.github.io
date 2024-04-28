@@ -31,7 +31,7 @@
       <Cta :href=work.url :textstroke="$t(`work-item.visit-website-stroke`)" :highlighted="$t(`work-item.visit-website-highlighted`)"></Cta>
     </div>
     <div v-for="(section, index) in work.sections" :class="`content-section ${section.direction}`">
-      <div v-for="(item) in section.items" class="content">
+      <div v-for="(item) in section.items" class="content" :class="item.filter == true ? 'filter' : ''">
         <div v-if="item.type == 'text'">
           <h4>{{ $t(`work-item.${$route.params.slug}.content.${index}.title`) }}</h4>
           <p>{{ $t(`work-item.${$route.params.slug}.content.${index}.text`) }}</p>
@@ -251,9 +251,22 @@ h1.text-stroke:after {
 
 .content video,
 .content img {
+  position: relative;
   display: block;
   max-width: 100%;
   max-height: 90vh;
+}
+
+.content.filter:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  z-index: 99999;
+  background: linear-gradient(0deg, rgba(30, 30, 30, 0.3), rgba(30, 30, 30, 0.3)), linear-gradient(0deg, rgba(150, 120, 182, 0.3), rgba(150, 120, 182, 0.3));
 }
 
 .content iframe {

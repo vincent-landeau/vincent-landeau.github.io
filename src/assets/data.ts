@@ -66,6 +66,7 @@ export const works = {
                     {
                         "type": 'image',
                         "src": '/old-picture.png',
+                        "filter": true,
                     }
                 ]
             },
@@ -78,6 +79,7 @@ export const works = {
                     {
                         "type": 'image',
                         "src": '/inspiration.jpeg',
+                        "filter": true,
                     }
                 ]
             },
