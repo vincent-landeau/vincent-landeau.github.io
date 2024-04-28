@@ -6,7 +6,7 @@
     </div>
     <div id="workItemImage" class="image">
       <div class="content">
-        <img :src="`/${slug}/background.jpg`" :alt="`${title} ${subtitle}  background`">
+        <img :src="`/works/${slug}/background.jpg`" :alt="`${title} ${subtitle}  background`">
       </div>
     </div>
   </a>

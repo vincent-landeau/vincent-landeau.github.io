@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
-    <img id="logo" class="logo" :src="`/${$route.params.slug}/logo.png`" :alt="`${work['nav-label']} logo`" >
-    <img class="bg" :src="`/${$route.params.slug}/background.jpg`" :alt="`${work['nav-label']} background`">
+    <img id="logo" class="logo" :src="`/works/${$route.params.slug}/logo.png`" :alt="`${work['nav-label']} logo`" >
+    <img class="bg" :src="`/works/${$route.params.slug}/background.jpg`" :alt="`${work['nav-label']} background`">
   </div>
   <section class="container">
     <div class="title">
@@ -36,9 +36,9 @@
           <h4>{{ $t(`work-item.${$route.params.slug}.content.${index}.title`) }}</h4>
           <p>{{ $t(`work-item.${$route.params.slug}.content.${index}.text`) }}</p>
         </div>
-        <img v-if="item.type == 'image'" :src="`/${$route.params.slug}${item.src}`" alt="">
-        <video v-else-if="item.type == 'local-video'" :src="`/${$route.params.slug}${item.src}`" alt="" preload="meta" autoplay loop onclick="this.paused ? this.play() : this.pause();"></video>
-        <iframe v-else-if="item.type == 'video'" :src="`/${$route.params.slug}${item.src}`" frameborder="0"></iframe>
+        <img v-if="item.type == 'image'" :src="`/works/${$route.params.slug}${item.src}`" alt="">
+        <video v-else-if="item.type == 'local-video'" :src="`/works/${$route.params.slug}${item.src}`" alt="" preload="meta" autoplay loop onclick="this.paused ? this.play() : this.pause();"></video>
+        <iframe v-else-if="item.type == 'video'" :src="`/works/${$route.params.slug}${item.src}`" frameborder="0"></iframe>
       </div>
     </div>
   </section>

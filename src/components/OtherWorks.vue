@@ -6,7 +6,7 @@
         <h3 class="text-stroke">{{ otherWork[1].subtitle }}</h3>
       </div>
       <div class="image">
-        <img :src="`/${otherWork[0]}/background.jpg`" :alt="`${otherWork['nav-label']} background`">
+        <img :src="`/works/${otherWork[0]}/background.jpg`" :alt="`${otherWork['nav-label']} background`">
       </div>
     </a>
   </section>
