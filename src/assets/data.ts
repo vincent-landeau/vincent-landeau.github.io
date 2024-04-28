@@ -6,18 +6,29 @@ export const works = {
         "date": "2021",
         "roles": ["graphist", "ux-ui", "frontend"],
         "url": "https://vincent-landeau.github.io/rock-en-delire/",
-        "content": [
-            {
-                text: false,
-                type: 'image',
-                src: '/site.png',
+        "sections": {
+            "logo":  {
+                "direction": 'row',
+                "items": [
+                    {
+                        "type": 'text',
+                    },
+                    {
+                        "type": 'image',
+                        "src": '/logo.png',
+                    }
+                ]
             },
-            {
-                text: true,
-                type: 'image',
-                src: '/logo.png',
+            "site": {
+                "direction": 'row',
+                "items": [
+                    {
+                        "type": 'image',
+                        "src": '/site.png',
+                    },
+                ]
             },
-        ]
+        }
     },
     "stanislac": {
         "nav-label": "Stanislac",
@@ -26,7 +37,17 @@ export const works = {
         "date": "2021",
         "roles": ["frontend"],
         "url": "",
-        "content": []
+        "sections": {
+            "demo":  {
+                "direction": 'row',
+                "items": [
+                    {
+                        "type": 'local-video',
+                        "src": '/demo.mp4',
+                    }
+                ]
+            },
+        }
     },
     "le-france": {
         "nav-label": "Le France",
@@ -35,14 +56,81 @@ export const works = {
         "date": "2022",
         "roles": ["game", "ux-ui"],
         "url": "https://www.annecy-paysages.com/une-plongee-au-coeur-de-lhistoire-ap23/",
-        "content": [
-            {
-                text: false,
-                type: 'image',
-                src: '/site.png',
+        "sections": {
+            "theme": {
+                "direction": 'row',
+                "items": [
+                    {
+                        "type": 'text',
+                    },
+                    {
+                        "type": 'image',
+                        "src": '/old-picture.png',
+                    }
+                ]
             },
-            
-        ]
+            "biomorphism": {
+                "direction": 'row-reverse',
+                "items": [
+                    {
+                        "type": 'text',
+                    },
+                    {
+                        "type": 'image',
+                        "src": '/inspiration.jpeg',
+                    }
+                ]
+            },
+            "dashboard-boatcore":  {
+                "direction": 'row',
+                "items": [
+                    {
+                        "type": 'image',
+                        "src": '/prefabs/dashboard.png',
+                    },
+                    {
+                        "type": 'local-video',
+                        "src": '/prefabs/boat-core.mp4',
+                    },
+                    {
+                        "type": 'image',
+                        "src": '/prefabs/boat-armature.png',
+                    }
+                ]
+            },
+            "boat":  {
+                "items": [
+                    {
+                        "type": 'image',
+                        "src": '/prefabs/boat.png',
+                    }
+                ]
+            },
+            "logo":  {
+                "direction": 'row',
+                "items": [
+                    {
+                        "type": 'text',
+                    },
+                    {
+                        "type": 'image',
+                        "src": '/logo.png',
+                    }
+                ]
+            },
+            "in-situ":  {
+                "direction": 'row-reverse',
+                "items": [
+                    {
+                        "type": 'text',
+                    },
+                    {
+                        "type": 'local-video',
+                        "src": '/inSitu.mp4',
+                    }
+                ]
+            },
+        }
     },
 };
 

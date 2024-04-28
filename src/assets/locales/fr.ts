@@ -47,7 +47,7 @@ export const fr = {
       "challenges": "Réaliser un site vitrine sans rafraichissement et avec une base de données local en JSON tout en apprenant ReactJS, une bibliothèque Javascript permettant de faciliter la création d'application web.",
       "solutions": "Refonte du logo, amélioration de leur communication sur les réseaux sociaux en leur créant des modèles de story pour instagram et une charte éditoriale ainsi que la réalisation d'un site web.",
       "content": {
-        "1": {
+        "logo": {
           "title": "Le logo",
           "text": "Pour cette refonte, nous avons voulu rajeunir l'image du festival tout en gardant le style Rock'n'Roll. Nous avons opter pour un logo typographique. La police a était intégralement créée afin de représenter ce côté géométrique décalé."
         }
@@ -61,7 +61,25 @@ export const fr = {
     "le-france": {
       "description": "Une plongée au coeur de l'histoire est un projet réalisé pour le festival Annecy paysages par Les Naufragés, une équipe de quatres étudiants en troisième année de Bachelor Gobelins Développeur & Designeur Interactif.{br}{br}Nous avons travaillé en collaboration avec Bonlieu Scène Nationale, l'organisateur de ce festival, ainsi que Async Studio, l'agence développant l'application de l'évènement et ayant proposé l'ajout de ces nouvelles expériences pour l'édition 2022.",
       "challenges": "Concevoir et réaliser une expérience interactive en réalité augmentée en 6 mois en apprenant à développer sur le moteur de jeu Unity.",
-      "solutions": "Une oeuvre interactive en réalité augmentée mettant en scène la resurection du France, bateau emblèmatique de la ville d'Annecy."
+      "solutions": "Une oeuvre interactive en réalité augmentée mettant en scène la resurection du France, bateau emblèmatique de la ville d'Annecy.",
+      "content": {
+        "theme": {
+          "title": "Le France",
+          "text": "Un bateau gorgé d'histoire ayant mystérieusement fait naufrage durant la nuit. Nous avons donc décidé d'intégrer ce symbole ancien du lac d'Annecy dans notre époque faisant renaître sous une nouvelle forme plus organique grâce à l'aide de l'utilisateur."
+        },
+        "biomorphism": {
+          "title": "Le biomorphisme",
+          "text": "C'est l'inspiration majeure de notre projet. Faire du vivant avec du non-vivant, c'est la définition la plus simple qu'on pourrait donner à ce mouvement qui correspond parfaitement à notre thématique."
+        },
+        "logo": {
+          "title": "Le logo",
+          "text": "Nous avons accentué le logo sur la nouvelle forme du France et donc nous rapprocher du biomorphisme. C'est pour cela que nous avons proposé un logo typographique avec des formes organiques, voire liquides, correspondant à l'évolution du France."
+        },
+        "in-situ": {
+          "title": "Le résultat",
+          "text": "L'expérience débute par le scanne du QR code qui nous invite ensuite à lire la petite histoire du France, bateau emblématique de la vieille Annecy ayant coulé mystérieusement durant la nuit. On aperçoit sur la droite, un tableau de bord très intrigant. La manette activée, une trappe s'ouvre et libère le cœur du France qui s'envole vers le lac. Un cercle apparaît, m'invitant à le toucher à un moment précis pour aider le cœur à battre de nouveau. À chaque touche réussie, nous apercevons une structure se former autour du cœur. Serait-ce la nouvelle forme du France ? Une fois la structure entièrement revenue, elle disparaît pour faire place au France d'antan que nous pouvons alors contempler. Un écran apparaît nous félicitant d'avoir réussi l'expérience et nous invite à aller sur un site web retraçant l'histoire du France."
+        },
+      }
     }
   },
   "not-found": {

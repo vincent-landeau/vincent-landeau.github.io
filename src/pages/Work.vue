@@ -30,14 +30,16 @@
       </div>
       <Cta :href=work.url :textstroke="$t(`work-item.visit-website-stroke`)" :highlighted="$t(`work-item.visit-website-highlighted`)"></Cta>
     </div>
-    <div v-for="(item, index) in work.content" class="content">
-      <div v-if="item.text">
-        <h4>{{ $t(`work-item.${$route.params.slug}.content.${index}.title`) }}</h4>
-        <p>{{ $t(`work-item.${$route.params.slug}.content.${index}.text`) }}</p>
+    <div v-for="(section, index) in work.sections" :class="`content-section ${section.direction}`">
+      <div v-for="(item) in section.items" class="content">
+        <div v-if="item.type == 'text'">
+          <h4>{{ $t(`work-item.${$route.params.slug}.content.${index}.title`) }}</h4>
+          <p>{{ $t(`work-item.${$route.params.slug}.content.${index}.text`) }}</p>
+        </div>
+        <img v-if="item.type == 'image'" :src="`/${$route.params.slug}${item.src}`" alt="">
+        <video v-else-if="item.type == 'local-video'" :src="`/${$route.params.slug}${item.src}`" alt="" preload="meta" autoplay loop onclick="this.paused ? this.play() : this.pause();"></video>
+        <iframe v-else-if="item.type == 'video'" :src="`/${$route.params.slug}${item.src}`" frameborder="0"></iframe>
       </div>
-      <img v-if="item.type == 'image'" :src="`/${$route.params.slug}${item.src}`" alt="">
-      <video v-else-if="item.type == 'local-video'" :src="`/${$route.params.slug}${item.src}`" alt=""></video>
-      <iframe v-else-if="item.type == 'video'" :src="`/${$route.params.slug}${item.src}`" frameborder="0"></iframe>
     </div>
   </section>
   <OtherWorks :key="componentKey" :slug=$route.params.slug></OtherWorks>
@@ -220,17 +222,24 @@ h1.text-stroke:after {
   grid-area: cta;
 }
 
-.content {
+.content-section {
   display: flex;
+  justify-content: center;
   gap: 10%;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
-.content > div,
-.content > div + img,
-.content > div + video,
-.content > div + iframe {
+.content-section.row { flex-direction: row;}
+.content-section.row-reverse { flex-direction: row-reverse;}
+.content-section.column { flex-direction: column;}
+.content-section.column-reverse { flex-direction: column-reverse;}
+
+.content-section .content {
+  max-width: 100%;
+}
+.content-section:not(.column):not(.column-reverse) .content:nth-last-child(n + 2),
+.content-section:not(.column):not(.column-reverse) .content:nth-last-child(n + 2)~* {
   max-width: 50%;
 }
 
@@ -240,9 +249,11 @@ h1.text-stroke:after {
   line-height: 48px;
 }
 
+.content video,
 .content img {
   display: block;
   max-width: 100%;
+  max-height: 90vh;
 }
 
 .content iframe {
@@ -295,12 +306,12 @@ h1.text-stroke:after {
     ". cta cta";
   }
 
-  .content {
+  .content-section {
     flex-wrap: wrap;
     justify-content: center;
   }
-  .content > div {
-    max-width: 100%;
+  .content {
+    max-width: 100%!important;
     width: 100%;
     padding-bottom: 50px;
   }
